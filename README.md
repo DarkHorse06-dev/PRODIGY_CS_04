@@ -33,6 +33,22 @@ Open this file to see the count of each key pressed along with the timestamp of 
 
 
 Important Notes
-Running in the Background: The script will run in the foreground and will stop listening when you press ESC. Be mindful of this if you need to work on other tasks simultaneously.
-Security and Privacy: Make sure to respect privacy and only use this script for tracking your own input.
-Stopping the Script: If you need to stop the script abruptly, you can also close the command line interface window, but this may not log the key counts.
+
+
+Running in the Background:
+
+
+The script will run in the foreground and will stop listening when you press ESC. Be mindful of this if you need to work on other tasks simultaneously.
+
+
+Security and Privacy:
+
+
+Make sure to respect privacy and only use this script for tracking your own input.
+
+
+
+Stopping the Script:
+
+
+If you need to stop the script abruptly, you can also close the command line interface window, but this may not log the key counts.
